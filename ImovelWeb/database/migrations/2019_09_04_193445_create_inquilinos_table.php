@@ -16,15 +16,15 @@ class CreateInquilinosTable extends Migration
         Schema::create('inquilinos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome', 70);
-            $table->string('cpf', 11);
-            $table->string('rg', 9);
+            $table->string('endereco',80);
+            $table->string('bairro',40);
+            $table->string('cidade',40);
+            $table->string('cep',10);
+            $table->string('uf',2);
             $table->string('fone',15);
             $table->string('email',50);
-            $table->string('imovel',13);
-            $table->string('corretor', 70);
-            $table->string('creci_corretor', 15)->nullable();
-            $table->string('status_pagamento', 8);
-            $table->string('contrato',2);
+            $table->string('cpf', 11);
+            $table->char('status_pagamento', 1);           
             $table->timestamps();
         });
     }
