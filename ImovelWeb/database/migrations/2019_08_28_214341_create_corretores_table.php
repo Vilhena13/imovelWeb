@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCorretorTable extends Migration
+class CreateCorretoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCorretorTable extends Migration
      */
     public function up()
     {
-        Schema::create('corretor', function (Blueprint $table) {
+        Schema::create('corretores', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome',70);
             $table->string('creci',15)->nullable();
@@ -30,6 +30,6 @@ class CreateCorretorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('corretor');
+        Schema::dropIfExists('corretores');
     }
 }

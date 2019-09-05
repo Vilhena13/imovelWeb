@@ -1,10 +1,10 @@
-<?php
+'<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImovelTable extends Migration
+class CreateImoveisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateImovelTable extends Migration
      */
     public function up()
     {
-        Schema::create('imovel', function (Blueprint $table) {
+        Schema::create('imoveis', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('proprietarios_id');
             $table->unsignedInteger('inquilinos_id');
@@ -32,6 +32,6 @@ class CreateImovelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imovel');
+        Schema::dropIfExists('imoveis');
     }
 }
